@@ -4,11 +4,13 @@ namespace App\Livewire\Doctor;
 
 use Livewire\Component;
 use App\Models\Doctor;
+use App\Models\Availability;
 
 class CreateDoctors extends Component
 {
     public $name, $email, $phone_number, $address, $speciality, $status = 'active', $password;
     public $isModalOpen = false; 
+    
     protected $rules = [
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:doctors,email',
