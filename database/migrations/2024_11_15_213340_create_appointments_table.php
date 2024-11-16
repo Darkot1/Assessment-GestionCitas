@@ -19,7 +19,7 @@ return new class extends Migration
             $table->datetime('end_time');
             $table->string('reason');
             $table->text('notes')->nullable();
-            $table->enum('status' , ['pending', 'confirmed', 'cancelled'])->default('pending');
+            $table->enum('status' , ['pending', 'confirmed', 'cancelled', 'done'])->default('pending');
             $table->timestamps();
         });
         
